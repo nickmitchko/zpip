@@ -46,7 +46,7 @@
       or admin accessis required to install a package
 ```
 
-![https://img.shields.io/github/v/release/nickmitchko/zpip?style=flat-square](https://img.shields.io/github/v/release/nickmitchko/zpip?style=flat-square)
+![https://img.shields.io/github/v/release/nickmitchko/zpip](https://img.shields.io/github/v/release/nickmitchko/zpip)
 
 ## Install
 
