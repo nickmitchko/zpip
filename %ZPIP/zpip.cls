@@ -1,7 +1,7 @@
 Include %ZPM.PackageManager.Common
 
 /// Used for version check
-Class %ZPM.zpip
+Class %ZPIP.zpip
 {
 
 ClassMethod Shell(pArgs)
