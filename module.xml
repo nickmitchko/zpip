@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="zpip.ZPM">
+    <Module>
+      <Name>zpip</Name>
+      <GlobalScope>true</GlobalScope>
+      <Version>0.0.1</Version>
+      <Description>Use pip from the intersystems terminal</Description>
+      <Keywords>pip python</Keywords>
+      <Packaging>module</Packaging>
+      <Dependencies>
+        <ModuleReference>
+          <Name>zpipe</Name>
+          <Version>1.*</Version>
+        </ModuleReference>
+      </Dependencies>
+      <Resource Name="%ZPIP.PKG"/>
+      <SourcesRoot>src</SourcesRoot>
+      <SystemRequirements Version=">=2022.1" />
+      <Invoke Class="%ZPIP.zpip" Method="UpdateLanguageExtensions" Phase="Compile" When="After" CheckStatus="false">
+      </Invoke>
+      <Invoke Class="%ZPIP.zpip" Method="PrintMessage" Phase="Activate" When="After" CheckStatus="false">
+      </Invoke>
+      <AfterInstallMessage>Module installed successfully! To use pip see above message %SYS> zpip "install package-names"</AfterInstallMessage>
+    </Module>
+  </Document>
+</Export>
