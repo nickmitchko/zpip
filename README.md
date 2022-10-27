@@ -50,10 +50,10 @@
 
 ## Install
 
-```
+```cos
 %SYS> zpm "install zpip"
 // OR
-zpm:%SYS>install zpip
+zpm:%SYS> install zpip
 ```
 
 ## Support for pip features
