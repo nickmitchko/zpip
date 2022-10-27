@@ -7,6 +7,53 @@
 
   NAME
       zpip, an irispython pip wrapper
+```
+
+
+![https://img.shields.io/github/v/release/nickmitchko/zpip](https://img.shields.io/github/v/release/nickmitchko/zpip)
+
+---
+
+## Getting Started
+
+```cos
+%SYS> zpm "install zpip"
+// OR
+zpm:%SYS> install zpip
+```
+
+## Install Package
+
+```cos
+%SYS> zpip "install <package>"
+```
+
+## Uninstalling Package
+
+> Note! You must use `uninstall -y` for the command to work correctly.
+
+```
+%SYS> zpip "uninstall -y <package>"
+```
+
+
+## Support for pip features
+
+* This is a wrapper around `irispython -m pip`
+* Wrapper means that any pip command **should** work
+* No guarantees that all pip commands work. User input not supported
+  * For example, any interactive command needs `-y` to function. eg;<br> `zpip "uninstall -y <package>"`
+
+
+```
+  _________ ___ ____  
+ |__  /  _ \_ _|  _ \ 
+   / /| |_) | || |_) |  
+  / /_|  __/| ||  __/ 
+ /____|_|  |___|_|    
+
+  NAME
+      zpip, an irispython pip wrapper
 
   SYNOPSIS
       zpip " [pip command] "
@@ -45,19 +92,3 @@
       In general, irispython pip fails when packages require sudo, root, 
       or admin accessis required to install a package
 ```
-
-![https://img.shields.io/github/v/release/nickmitchko/zpip](https://img.shields.io/github/v/release/nickmitchko/zpip)
-
-## Install
-
-```cos
-%SYS> zpm "install zpip"
-// OR
-zpm:%SYS> install zpip
-```
-
-## Support for pip features
-
-* This is a wrapper around `irispython -m pip`
-* Wrapper means that any pip command **should** work
-* No guarantees that all pip commands work

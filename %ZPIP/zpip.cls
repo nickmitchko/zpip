@@ -1,7 +1,7 @@
 Include %ZPM.PackageManager.Common
 
 /// Used for version check
-Class Dev Community.zpip.zpip(1)
+Class %ZPM.zpip
 {
 
 ClassMethod Shell(pArgs)
@@ -9,7 +9,7 @@ ClassMethod Shell(pArgs)
     #; Gets the install directory
     Set InstallDir = $SYSTEM.Util.InstallDirectory()
     Set pythonbin = InstallDir _  $$$SLASH _ "bin" _  $$$SLASH _ "irispython"
-
+  
     #; pip3 install <packages>
 
     Do cmd^Zpipe(pythonbin _ " -m pip " _ pArgs)
