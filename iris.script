@@ -1,0 +1,19 @@
+    zn "%SYS"
+
+    // Unexpire passwords and set up passwordless mode to simplify dev use.
+    do ##class(Security.Users).UnExpireUserPasswords("*")
+    zpm "install passwordless"
+    zn "USER"
+
+    // Create /_vscode web app to support intersystems-community.testingmanager VS Code extension
+    zpm "install vscode-per-namespace-settings"
+ 
+    zpm "load /home/irisowner/dev/ -v":1
+
+    // work around brokem lang-extension
+    zpm "install language-extender"
+    set lin=1
+    set lin(1)="ZPIP(pArgs) Do ##class(%ZPIP.zpip).Shell(pArgs) Quit"
+    do cmd^zLangExtender("C","ZPIP",.lin)
+
+    halt
