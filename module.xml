@@ -4,7 +4,7 @@
     <Module>
       <Name>zpip</Name>
       <GlobalScope>true</GlobalScope>
-      <Version>0.0.4</Version>
+      <Version>0.0.5</Version>
       <Description>Use pip from the intersystems terminal</Description>
       <Keywords>pip python</Keywords>
       <Packaging>module</Packaging>
